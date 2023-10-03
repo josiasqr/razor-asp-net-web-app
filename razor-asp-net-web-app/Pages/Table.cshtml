@@ -1,0 +1,58 @@
+﻿@page
+@model razor_asp_net_web_app.Pages.TablesModel
+@{
+    ViewData["Title"] = "Registrar Mesa";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="~/img/chairs-2179044_1280.jpg" class="img-thumbnail" />
+        </div>
+        <div class="col-md-6">
+            <h1 class="text-center">@ViewData["Title"]</h1>
+            <hr />
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Numero Mesa</label>
+                    <input type="text"
+                           class="form-control"
+                           id="name"
+                           name="name"
+                           placeholder="Ingrese número mesa"
+                           required />
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" type="button">Agregar Mesa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<h2 class="pt-5">Lista de Mesas</h2>
+<hr />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="size" scope="col">ID</th>
+            <th scope="col">Número Mesa</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mesa 01</td>
+            <td class="size">
+                <button class="btn btn-warning">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </td>
+            <td class="size">
+                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>

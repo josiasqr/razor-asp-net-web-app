@@ -1,0 +1,90 @@
+﻿@page
+@model razor_asp_net_web_app.Pages.EmployeeModel
+@{
+    ViewData["Title"] = "Employee";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center">
+            <img src="~/img/kitchen-81493_1920.jpg" class="img-thumbnail" />
+        </div>
+        <div class="col-md-6">
+            <h1 class="text-center">@ViewData["Title"]</h1>
+            <hr />
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text"
+                           class="form-control"
+                           id="name"
+                           name="name"
+                           placeholder="Ingrese nombres"
+                           required />
+                </div>
+                <div class="mb-3">
+                    <label for="dni" class="form-label">DNI</label>
+                    <input type="text"
+                           class="form-control"
+                           id="dni"
+                           name="dni"
+                           placeholder="Ingrese numero DNI"
+                           required />
+                </div>
+                <div class="mb-3">
+                    <label for="role" class="form-label">Rol Trabajador</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Rol Trabajador</option>
+                        <option value="1">Mesero</option>
+                        <option value="2">Cocinero</option>
+                        <option value="3">Administrador</option>
+                    </select>
+                </div>         
+                <div class="mb-3">
+                    <label for="salary" class="form-label">Salario Base</label>
+                    <input type="number"
+                           class="form-control"
+                           id="salary"
+                           name="salary"
+                           placeholder="Ingrese salario base"
+                           required />
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" type="button">Agregar Menú</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<h2 class="pt-5">Lista de Empleados</h2>
+<hr />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="size" scope="col">ID</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Rol Trabajador</th>
+            <th scope="col">Salario Base</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Arotinco Cucho, Wilfredo</td>
+            <td>Cocinero</td>
+            <td>$ 4500.00</td>
+            <td class="size">
+                <button class="btn btn-warning">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </td>
+            <td class="size">
+                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>

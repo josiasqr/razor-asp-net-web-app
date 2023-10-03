@@ -1,0 +1,183 @@
+﻿@page
+@model razor_asp_net_web_app.Pages.OrderModel
+@{
+    ViewData["Title"] = "Registrar Orden";
+}
+<h1 class="text-center mb-3">@ViewData["Title"]</h1>
+<hr />
+<div>
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column align-items-between justify-content-between">
+            
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="size" scope="col">ID</th>
+                            <th scope="col">Nombre Menú</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Arroz con Pollo</td>
+                            <td>Comida Típica del Perú</td>
+                            <td>$ 25.00</td>
+                            <td class="size">
+                                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ceviche</td>
+                            <td>Plato Marino del Perú</td>
+                            <td>$ 45.00</td>
+                            <td class="size">
+                                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Litro de Chicha</td>
+                            <td>Bebida Peruana</td>
+                            <td>$ 15.00</td>
+                            <td class="size">
+                                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <hr />
+                <div class="d-flex justify-content-between fw-bold">
+                    <div>
+                        Total
+                    </div>
+                    <div>
+                        $ 85.00
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-success btn-lg my-3">Ordenar</button>
+        </div>
+
+        <div class="col-md-6 d-flex flex-column">
+            <div>
+                <h5>Menu</h5>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-success">Add</button>
+                </div>
+                <div class="my-3">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Elije Plato</option>
+                        <option value="1">Ceviche</option>
+                        <option value="2">Arroz con Pollo</option>
+                        <option value="3">Chicha</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <h5>Mesa</h5>
+                <div class="my-3">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Elije Mesa</option>
+                        <option value="1">Mesa 01</option>
+                        <option value="2">Mesa 02</option>
+                        <option value="3">Mesa 03</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+                <h5>Estado</h5>
+                <div class="d-flex">
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="pedido" checked>
+                        <label class="form-check-label" for="pedido">
+                            Pedido
+                        </label>
+                    </div>
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="preparado">
+                        <label class="form-check-label" for="preparado">
+                            Preparado
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="pagado">
+                        <label class="form-check-label" for="pagado">
+                            Pagado
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="pt-5">Lista de Ordenes</h2>
+<hr />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="size" scope="col">ID</th>
+            <th scope="col">Mesa</th>
+            <th scope="col">Status</th>
+            <th scope="col">Empleado</th>
+            <th scope="col">Total</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mesa 01</td>
+            <td>Pedido</td>
+            <td>76543218</td>
+            <td>$ 85.00</td>
+            <td class="size">
+                <button class="btn btn-warning">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </td>
+            <td class="size">
+                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mesa 02</td>
+            <td>Preparado</td>
+            <td>76543218</td>
+            <td>$ 85.00</td>
+            <td class="size">
+                <button class="btn btn-warning">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </td>
+            <td class="size">
+                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Mesa 03</td>
+            <td>Pagado</td>
+            <td>76543218</td>
+            <td>$ 85.00</td>
+            <td class="size">
+                <button class="btn btn-warning">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </td>
+            <td class="size">
+                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>

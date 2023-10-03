@@ -1,0 +1,141 @@
+﻿@page
+@model razor_asp_net_web_app.Pages.RecieptModel
+@{
+    ViewData["Title"] = "Genera Comprobante";
+}
+<h1 class="text-center mb-3">@ViewData["Title"]</h1>
+<hr />
+<div>
+    <div class="row">
+        <div class="col-md">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h1 class="fw-light">CASUAL FOOD</h1>
+                </div>
+                <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="text-center">R.U.C. 1026793741</h4>
+                        <h3>BOLETA DE VENTA</h3>
+                        <h5 class="text-center">002-0000504</h5>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex justify-content-end me-4">
+                    <div class="form-check pe-5">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="boleta" checked>
+                        <label class="form-check-label" for="boleta">
+                            Boleta
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="factura">
+                        <label class="form-check-label" for="factura">
+                            Factura
+                        </label>
+                    </div>
+                </div>
+                <form>
+                    <div class="input-group my-3">
+                        <span class="input-group-text" id="senior">Señor(es):</span>
+                      <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="senior">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text" id="direction">Direción:</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="direction">
+                    </div>
+                    <div class="d-flex my-3">
+                        <div class="input-group me-5">
+                            <span class="input-group-text" id="dni">Direción:</span>
+                            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="dni">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text" id="fecha">Direción:</span>
+                            <input type="date" class="form-control" placeholder="" aria-label="Username" aria-describedby="fecha">
+                        </div>
+                    </div>
+
+                    <!-- Tabla de orden -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="size" scope="col">Cantidad</th>
+                                <th scope="col">Descripción</th>
+                                <th class="size"  scope="col">Importe</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Arroz con Pollo</td>
+                                <td>$ 25.00</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ceviche</td>
+                                <td>$ 45.00</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Litro de Chicha</td>
+                                <td>$ 15.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <hr />
+                        <div class="d-flex justify-content-end fw-bold">
+                            <div class="me-5">
+                                Total:
+                            </div>
+                            <div>
+                                $ 85.00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success btn-lg btn-block my-3">Generar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="pt-5">Lista de Comprobantes</h2>
+<hr />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Serie</th>
+            <th scope="col">Asignado</th>
+            <th scope="col">Ruc/Dni</th>
+            <th scope="col">Total</th>
+            <th scope="col">Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>002-0000504</td>
+            <td>Valverde Garay, Ivan</td>
+            <td>76543218</td>
+            <td>$ 85.00</td>
+            <td class="size">
+                <button class="btn btn-warning">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>002-0000505</td>
+            <td>Choquehuanca Silva, Lydia</td>
+            <td>78653425</td>
+            <td>$ 105.00</td>
+            <td class="size">
+                <button class="btn btn-warning">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
